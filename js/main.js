@@ -1,37 +1,19 @@
+import {quizzData} from './data.js';
+
+
 window.addEventListener("load", ()=>{
     console.log("Quiz App Loaded")
 
+    const interactBtn = document.querySelector(".interact-btn");
 
-    const quizzData = [
-        {
-            question: "Who is the villain in The Shining?",
-            a: 'Jack Nicholson',
-            b: 'Dustin Hoffman',
-            c: 'Robert DeNiro',
-            answer: 'a'
-        },
-        {
-            question: "Who is the director of Seven",
-            a: 'Martin Scorcesse',
-            b: 'Christopher Nolan',
-            c: 'David Fincher',
-            answer: 'c'
-        },
-        {
-            question: "Who is the president of the USA",
-            a: 'Lebron James',
-            b: 'Donald Trump',
-            c: 'Hillary Clinton',
-            answer: 'b'
-        },
-        {
-            question: "Who's says Get Over Here!",
-            a: 'Hanzo Hasachi',
-            b: 'Sub-Zero',
-            c: 'Geras',
-            answer: 'a'
-        }
-    ];
+    interactBtn.addEventListener("click", ()=>{
+        const leftPanel = document.querySelector(".left-panel");
+        leftPanel.classList.toggle("active");
+
+        document.querySelector(".main_container").classList.toggle("active")
+    })
+
+
 
 
 
@@ -41,6 +23,10 @@ window.addEventListener("load", ()=>{
     loadQuiz()
 
     function loadQuiz(){
+        let selections = document.querySelectorAll(".selection");
+        selections.forEach(selection =>{
+            selection.checked = false;
+        })
         if(currentQuiz > (quizzData.length -1)){
             quizFinished()
             return
