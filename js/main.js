@@ -6,6 +6,11 @@ window.addEventListener("load", ()=>{
 
     const interactBtn = document.querySelector(".interact-btn");
 
+    const reloadBtn = document.querySelector(".fa-redo");
+    reloadBtn.addEventListener("click", ()=>{
+        location.reload();
+    })
+
     interactBtn.addEventListener("click", ()=>{
         const leftPanel = document.querySelector(".left-panel");
         leftPanel.classList.toggle("active");
@@ -105,6 +110,8 @@ window.addEventListener("load", ()=>{
             icon.style.color = "greenyellow"
         }
     }
+
+  
 
     function getSelected(){
         let selections = document.querySelectorAll(".selection");

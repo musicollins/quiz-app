@@ -108,8 +108,8 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    width: 400px;
+    justify-content: space-evenly;
+    width: 500px;
     height: 100px;
     margin: 25em auto 0 auto;
     border: 2px solid white;
@@ -117,19 +117,12 @@ body{
     box-shadow: 0 0 10px rgb(219, 217, 217);
     background-color: #181818;
     transition: .5s ease;
+    flex-wrap: wrap;
     
     
     
 }
-.message:hover{
-  margin: 20em auto 0 auto;
-  height: 300px;
-  /* align-items: flex-start; */
-  /* justify-content: space-around; */
-  transition: .5s ease;
-  flex-wrap: wrap;
-  
-}
+
 
 .message-title{
     color: white;
@@ -145,6 +138,27 @@ body{
     font-size: 3em;
     color: greenyellow;
 }
+.fa-redo{
+    display: block;
+    /* background-color: white; */
+    
+    font-weight: 600;
+    font-size: 3em;
+    color: greenyellow;
+    /* transform: rotate(190deg) */
+    transition: 1s ease-out;
+}
+.fa-redo:hover{
+    display: block;
+    /* background-color: white; */
+    
+    font-weight: 600;
+    font-size: 4em;
+    color: greenyellow;
+    transform: rotate(390deg);
+    transition: 1s ease-in;
+}
+
 
 .left-panel{
     position: absolute;
@@ -191,6 +205,11 @@ body{
     height: 35em;
     margin: auto;
     
+}
+
+.reload-btn{
+    width: 100%;
+    display: none;
 }
 
 
